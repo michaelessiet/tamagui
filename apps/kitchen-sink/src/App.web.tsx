@@ -73,7 +73,7 @@ const SandboxFrame = (props: { children: any }) => {
       />
 
       <Theme name={screenshot ? 'blue' : undefined}>
-        <XStack w="100%" h="100%" fullscreen>
+        <XStack debug="borders" w="100%" h="100%" fullscreen>
           <YStack
             {...(centered && {
               ai: 'center',

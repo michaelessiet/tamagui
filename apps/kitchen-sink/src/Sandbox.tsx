@@ -5,9 +5,12 @@ import { forwardRef, useState } from 'react'
 import { Platform } from 'react-native'
 import {
   Button,
+  H1,
+  H2,
   H3,
   Paragraph,
   SizableText,
+  Spacer,
   Square,
   TamaguiElement,
   Text,
@@ -86,10 +89,19 @@ export const Sandbox = () => {
   return (
     <>
       {/* @ts-ignore */}
-      <XStack>
-        <Button theme="pink" size="$10" f={1} fb={0}>
-          <Button.Text>Facebook</Button.Text>
-        </Button>
+      <XStack debug="borders">
+        <H1 debug="borders">Test</H1>
+        <Spacer size="$3" debug="borders" />
+        <H2 debug="borders">Test</H2>
+        <Spacer size="$3" debug="borders" />
+        <H3 debug="borders">Test</H3>
+        <YStack debug="borders">
+          <Paragraph debug="borders">Test</Paragraph>
+        </YStack>
+        <SizableText debug="borders">Test</SizableText>
+        {/* <Button theme="pink" size="$10" debug="borders" f={1} fb={0}>
+          <Button.Text debug="borders">Facebook</Button.Text>
+        </Button> */}
       </XStack>
 
       {/* <TextInput theme={theme} /> */}
@@ -105,10 +117,10 @@ export const Sandbox = () => {
       {/* <BenchmarkSelect /> */}
 
       {/* TODO test this one at diff sizes make sure:
-    
+
       - font size is right at each size
       - textTransform + lineHeight too etc
-    
+
     */}
       {/* <H1
         ta="left"
